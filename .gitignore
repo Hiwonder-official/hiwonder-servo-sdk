@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+
+# Arduino
+*.o
+*.elf
+*.hex
+build/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
