@@ -1,8 +1,8 @@
 """
 hiwonder_servo_rpi.py — Raspberry Pi driver for HX-30HM bus servo
 
-Uses /dev/ttyS0 (GPIO 14/15) or /dev/ttyUSB0.
-On RPi 4/5 the default UART is /dev/ttyAMA0 — disable Bluetooth first:
+Uses /dev/ttyS0 (GPIO 14/15) or /dev/ttyAMA0.
+On RPi 3/4/5 the default UART is /dev/ttyAMA0 — disable Bluetooth first:
   Add "dtoverlay=disable-bt" to /boot/config.txt and reboot.
 """
 
@@ -10,17 +10,7 @@ from __future__ import annotations
 import time
 from typing import Optional
 
-# Re-use the generic Python SDK — it works on RPi unchanged.
-import sys
-import os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '..', 'python'))
-
-from hiwonder_servo import HiwonderBus, Servo, Reg, sync_move, BROADCAST_ID
-
-
-# ---------------------------------------------------------------------------
-# Raspberry Pi convenience wrapper (adds GPIO-based direction control if needed)
-# ---------------------------------------------------------------------------
+from hiwonder import HiwonderBus, Servo, Reg, sync_move, BROADCAST_ID
 
 try:
     import RPi.GPIO as GPIO

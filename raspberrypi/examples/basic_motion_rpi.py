@@ -10,7 +10,7 @@ import time
 import sys
 import os
 
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), ".."))
+sys.path.insert(0, os.path.join(os.path.dirname(__file__), "../.."))
 from raspberrypi.hiwonder_servo_rpi import RpiServoBus, Servo
 
 
@@ -32,7 +32,7 @@ def main():
         print(f"Moving to {pos}...")
         servo.move_to(pos, speed=400)
         time.sleep(1.5)
-        print(f"  pos={servo.position()}, temp={servo.temperature()}°C")
+        print(f"  pos={servo.position}, temp={servo.temperature}°C")
 
     bus.close()
 

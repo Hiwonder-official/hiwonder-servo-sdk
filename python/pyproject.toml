@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.backends.legacy:build"
+
+[project]
+name = "hiwonder-servo"
+version = "1.0.0"
+description = "Python SDK for HX-30HM magnetic-encoder bus servo"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+dependencies = ["pyserial>=3.5"]
+
+[project.urls]
+Homepage = "https://github.com/Hiwonder-official/-hiwonder-servo-sdk"
+
+[tool.setuptools.packages.find]
+where = ["."]
