@@ -4,6 +4,8 @@
 > 固件版本：2.43 / 寄存器表版本：V3.7  
 > 字节序：**小端（Little-Endian）**，低字节在前
 
+**[English](register_table_en.md) | 中文**
+
 ---
 
 ## 说明

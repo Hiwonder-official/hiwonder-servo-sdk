@@ -350,7 +350,7 @@ See [`stm32/README_STM32.md`](stm32/README_STM32.md) for full CubeIDE setup, wir
 | SYNC READ | 0x82 | Read same register from multiple servos |
 | SYNC WRITE | 0x83 | Write same register to multiple servos |
 
-See [`docs/protocol.md`](docs/protocol.md) for full frame format, checksum algorithm, and examples.
+See [`docs/protocol_en.md`](docs/protocol_en.md) for full frame format, checksum algorithm, and examples.
 
 ---
 
@@ -370,9 +370,9 @@ See [`docs/protocol.md`](docs/protocol.md) for full frame format, checksum algor
 | Temperature | 0x3F | 1 byte, °C, read-only |
 | Current (mA) | 0x45 | 2 bytes, read-only |
 
-> **0x2A vs 0x28**: Always use 0x2A (TARGET_POS). Together with 0x2C (time) and 0x2E (speed), it forms a 6-byte atomic block — one write instruction sets all three simultaneously. Writing 0x28 and 0x29 separately risks a race condition where the servo starts moving between the two writes. See [`docs/register_table.md`](docs/register_table.md) for the full comparison.
+> **0x2A vs 0x28**: Always use 0x2A (TARGET_POS). Together with 0x2C (time) and 0x2E (speed), it forms a 6-byte atomic block — one write instruction sets all three simultaneously. Writing 0x28 and 0x29 separately risks a race condition where the servo starts moving between the two writes. See [`docs/register_table_en.md`](docs/register_table_en.md) for the full comparison.
 
-Full register table: [`docs/register_table.md`](docs/register_table.md)
+Full register table: [`docs/register_table_en.md`](docs/register_table_en.md)
 
 ---
 
