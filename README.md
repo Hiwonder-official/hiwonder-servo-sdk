@@ -1,5 +1,7 @@
 # hiwonder-servo-sdk
 
+**English | [中文](README_CN.md)**
+
 Python / ESP32 / Raspberry Pi / STM32 SDK for the **Hiwonder HX-30HM** magnetic-encoder bus servo.
 
 - Protocol: UART half-duplex, 1 Mbps, 8N1, little-endian packet framing
